@@ -1,0 +1,74 @@
+score = 0
+print("Welcome to python quiz challenge")
+print("")
+print("1.Who developed python?")
+print("1.James Gosling")
+print("2.Guido van Rossum")
+print("3.Bjarne Stroustrup")
+print("4.Dennis Ritchie")
+answer = int(input("Enter the option(1/2/3/4):"))
+if(answer==1 or answer==3 or answer==4 or answer>4):
+    print("Wrong answer,correct answer is:Guido van Rossum ")
+    print("")
+else:
+    print("Correct answer")
+    print("")
+    score=score +1
+    
+print("2.Which data type is immutable?")
+print("1.List")
+print("2.Dictionary")
+print("3.Tuple")
+print("4.Set")
+answer = int(input("Enter the option(1/2/3/4):"))
+if(answer==1 or answer==2 or answer==4 or answer>4):
+    print("Wrong answer,correct answer is:Tuple")
+    print("")
+else:
+    print("Correct answer")
+    print("")
+    score=score +1
+    
+print("3. Which of the following is used to take input from the user in Python?")
+print("1.input()")
+print("2.scan()")
+print("3.read()")
+print("4.write()")
+answer = int(input("Enter the option(1/2/3/4):"))
+if(answer==2 or answer==3 or answer==4 or  answer>4):
+    print("Wrong answer,correct answer is:input()")
+    print("")
+else:
+    print("Correct answer")
+    print("")
+    score=score +1
+
+print("4.Which statement is used to stop a loop?")
+print("1.stop")
+print("2.exit")
+print("3.break")
+print("4.continue")
+answer = int(input("Enter the option(1/2/3/4):"))
+if(answer==2 or answer==1 or answer==4 or  answer>4):
+    print("Wrong answer,correct answer is:input()")
+    print("")
+else:
+    print("Correct answer")
+    print("")
+    score=score +1
+    
+print("5.What does len() function do?")
+print("1.Counts variables")
+print("2.Deletes data")
+print("3.Finds data type")
+print("4.Counts characters/items")
+answer = int(input("Enter the option(1/2/3/4):"))
+if(answer==1 or answer==2 or answer==3 or  answer>4):
+    print("Wrong answer,correct answer is:input()")
+    print("")
+else:
+    print("Correct answer")
+    print("")
+    score=score +1
+print("Quiz Completed!")
+print("Your Score:", score, "/ 5")
