@@ -1,0 +1,40 @@
+library_books = ["Atomic Habits", "Harry Potter", "Whispers in the Wind", "Dreams of Tomorrow", "The Silent Forest", "Python Basics", "Java Programming", "Data Structures", "Machine Learning", "Web Development"]
+
+def display_books():
+    print("\nAvailable Books:")
+    for book in library_books:
+        print("-", book)
+
+def borrow_book(book_name):
+    if book_name in library_books:
+        library_books.remove(book_name)
+        print(book_name, "has been borrowed successfully.")
+    else:
+        print("Sorry! This book is not available.")
+
+def return_book(book_name):
+    library_books.append(book_name)
+    print(book_name, "has been returned successfully.")
+
+while True:
+    print("\n--- Library Menu ---")
+    print("1. View Books")
+    print("2. Borrow Book")
+    print("3. Return Book")
+    print("4. Exit")
+
+    choice = input("Enter your choice: ")
+
+    if choice == "1":
+        display_books()
+    elif choice == "2":
+        book = input("Enter the book name to borrow: ")
+        borrow_book(book)
+    elif choice == "3":
+        book = input("Enter the book name to return: ")
+        return_book(book)
+    elif choice == "4":
+        print("Thank you for using the Library System!")
+        break
+    else:
+        print("Invalid choice. Try again.")
