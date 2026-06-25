@@ -1,0 +1,46 @@
+pin = int(input("Set your PIN: ")) 
+balance = 5000
+print("\nWelcome to the ATM")
+
+entered_pin = int(input("Enter your PIN: "))  # User enters PIN
+
+if entered_pin == pin:
+    while True:
+        print("--- ATM MENU ---")
+        print("1. Check Balance")
+        print("2. Deposit")
+        print("3. Withdraw")
+        print("4. Exit")
+
+        choice = input("Choose an option (1-4): ")
+
+        if choice == "1":
+            print("Your balance is: ₹", balance)
+
+        elif choice == "2":
+            deposit = int(input("Enter amount to deposit: ₹"))
+            if deposit > 0:
+                balance += deposit
+                print("Deposit successful.")
+            else:
+                print("Invalid amount.")
+
+        elif choice == "3":
+            withdraw = int(input("Enter amount to withdraw: ₹"))
+            if withdraw > balance:
+                print("Insufficient balance.")
+            elif withdraw <= 0:
+                print("Invalid amount.")
+            else:
+                balance -= withdraw
+                print("Please collect your cash.")
+
+        elif choice == "4":
+            print("Thank you for using the ATM.")
+            break
+
+        else:
+            print("Invalid choice. Try again.")
+
+else:
+    print("Wrong PIN. Access denied.")
